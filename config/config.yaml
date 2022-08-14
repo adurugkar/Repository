@@ -26,7 +26,7 @@ data_transformation_config:
   transformed_test_dir: test
   preprocessing_dir: preprocessed
   preprocessed_object_file_name: preprocessed.pkl
-  
+
 model_trainer_config:
   trained_model_dir: trained_model
   model_file_name: model.pkl
@@ -34,7 +34,7 @@ model_trainer_config:
   model_config_dir: config
   model_config_file_name: model.yaml
 
-
+#this file contantent the best model location
 model_evaluation_config:
   model_evaluation_file_name: model_evaluation.yaml
   
