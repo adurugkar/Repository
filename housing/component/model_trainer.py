@@ -18,8 +18,8 @@ class HousingEstimatorModel:
         preprocessing_object: preprocessing_object
         trained_model_object: trained_model_object
         """
-        self.preprocessing_object = preprocessing_object
-        self.trained_model_object = trained_model_object
+        self.preprocessing_object = preprocessing_object# sing this for transformation 
+        self.trained_model_object = trained_model_object# using this for prdict the value
 
     def predict(self, X):
         """

@@ -37,7 +37,7 @@ class ModelEvaluation:
             if not os.path.exists(model_evaluation_file_path):
                 write_yaml_file(file_path=model_evaluation_file_path,
                                 )
-                return model
+                return model # for 1st time it will return me none (no fill at first time)
             model_eval_file_content = read_yaml_file(file_path=model_evaluation_file_path)
 
             model_eval_file_content = dict() if model_eval_file_content is None else model_eval_file_content
@@ -116,7 +116,7 @@ class ModelEvaluation:
 
             model = self.get_best_model()
 
-            if model is None:
+            if model is None: # this if statmet will called when model (best_model )file is not exist.
                 logging.info("Not found any existing model. Hence accepting trained model")
                 model_evaluation_artifact = ModelEvaluationArtifact(evaluated_model_path=trained_model_file_path,
                                                                     is_model_accepted=True)

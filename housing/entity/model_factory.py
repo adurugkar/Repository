@@ -87,6 +87,8 @@ def evaluate_regression_model(model_list: list, X_train:np.ndarray, y_train:np.n
 
             # Calculating harmonic mean of train_accuracy and test_accuracy
             model_accuracy = (2 * (train_acc * test_acc)) / (train_acc + test_acc)
+            
+            # we are checking here it's over fitted and underfitted 
             diff_test_train_acc = abs(test_acc - train_acc)
             
             #logging all important metric
